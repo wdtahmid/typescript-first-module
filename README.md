@@ -1,42 +1,48 @@
 #Type Sript First Module
 ##Install 
-
+```
 npx create-react-app folder/app-name template typescript
-
+```
 ### Set types (Primiteve) string, boolean, number
 -string
+```
 const name:string = 'Tahmid'; ok
 const name:string = Tahmid; Wrong
 const name:string = 35; Wrong
-
+```
 -number
+```
 const age:number = 35; ok
 const age:number = '35'; Wrong
 const age:number = 'Tahmid'; Wrong
-
--Boolean 
+```
+-Boolean
+``` 
 const isSmart : boolean = true; ok
 const isSmart:boolean = 'true'; Wrong
 const isSmart:boolean = '0'; Wrong
 const isSmart:boolean = 0; ok [Note: 1 and 0 refer true and false]
-
+```
 ## Set type (Non-Primitive) Array, Object
 -Array 
+```
 const students:string[] = ['Tahmid', 'Saohel' 'Bravo', 'Omar']; Ok - all are the elements of this array is string.
 const marks:string[] = [343, 54, 24, 56, 657]; Wrong - all are the elements of this array is number.
 const students:number[] = ['Tahmid', 'Saohel' 'Bravo', 'Omar']; Wrong - all are the elements of this array is string.
 const marks:number[] = [343, 54, 24, 56, 657]; Ok - all are the elements of this array is number.
-
+```
 -Object
+```
 const person:{propertyNmae:type like - name:string, age: number, isMale: true} = {
     name: 'Tahmid', ok
     age: 35, ok
     isMale: true, ok
 }
-
+```
 We can use an interface for the above oject type
 
 ## interface Declaration for an object
+```
 interface Persone(interface name wii be capital letter) {
     property:type,
     -------------
@@ -44,18 +50,19 @@ interface Persone(interface name wii be capital letter) {
     age: number,
     isMale: true
 }
-
+```
 ## Using interface on the object
+```
 const person:Person(interfacename) = {
     name: 'Tahmid', ok
     age: 35, ok
     isMale: true, ok
 }
-
+```
 ## Some notes:
 -If an prperty is exist on the interface but not existing on the main object
 we can put an optional chaining sign on that property-- like isMarried property
-
+```
 interface Persone(interface name wii be capital letter) {
     property:type,
     -------------
@@ -64,12 +71,12 @@ interface Persone(interface name wii be capital letter) {
     isMale: true,
     isMarried?: true
 }
-
+```
 -If an prperty is number or string or boolean on the main object
 we can put an | (or sign/single bar above the shift key) withing the two types like below
 **
 ```
-**interface Persone(interface name wii be capital letter) {
+interface Persone(interface name wii be capital letter) {
     property:type,
     -------------
     name: string | number,
