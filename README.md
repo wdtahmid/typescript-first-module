@@ -68,14 +68,14 @@ interface Persone(interface name wii be capital letter) {
 -If an prperty is number or string or boolean on the main object
 we can put an | (or sign/single bar above the shift key) withing the two types like below
 ```
-interface Persone(interface name wii be capital letter) {
+**interface Persone(interface name wii be capital letter) {
     property:type,
     -------------
     name: string | number,
     age: number | string,
     isMale: true,
     isMarried?: boolean | string
-}
+}**
 ```
 
 # Getting Started with Create React App
