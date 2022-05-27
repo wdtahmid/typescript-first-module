@@ -43,7 +43,7 @@ We can use an interface for the above oject type
 
 ## interface Declaration for an object
 ```
-interface Persone(interface name wii be capital letter) {
+interface Persone(interface name will be capital letter) {
     property:type,
     -------------
     name: string,
@@ -63,18 +63,18 @@ const person:Person(interfacename) = {
 -If an prperty is exist on the interface but not existing on the main object
 we can put an optional chaining sign on that property-- like isMarried property
 ```
-interface Persone(interface name wii be capital letter) {
+interface Persone(interface name will be capital letter) {
     property:type,
     -------------
     name: string,
     age: number,
     isMale: true,
-    isMarried?: true
+    isMarried?: true (Like this)
 }
 ```
 -If an prperty is number or string or boolean on the main object
 we can put an | (or sign/single bar above the shift key) withing the two types like below
-**
+
 ```
 interface Persone(interface name wii be capital letter) {
     property:type,
@@ -85,7 +85,61 @@ interface Persone(interface name wii be capital letter) {
     isMarried?: boolean | string
 }
 ```
-**
+## Function in typescript
+- If we don't want to return anything from a function then we will use :void (semicolone void)
+```
+const handleAddUser = ():void =>{} ok
+
+const handleAddUser = ():void =>{
+    return name;
+} Wrong - We should remove the void key word in this case.
+
+```
+
+- Set the function parameter type
+```
+const handleAddUser = (name: string, age: number, isMale:true):void=>{
+    const name = 'Tahmid';
+    const age = 35;
+    const isMale = true;
+}
+```
+> Note we don't want to return anything from above function
+
+- Set function return type
+```
+Ok
+const multiply = (firstNumber: number, secondNumber: number):number=>{
+    const result = firstNumber * secondNumber;
+    return result;
+}
+console.log(multiply(10, 10));
+
+
+Wrong
+const multiply = (firstNumber: number, secondNumber: number): string => {
+    const result = firstNumber * secondNumber;
+    return result
+  }
+
+  console.log(multiply(10, 10));
+```
+> We will face an error like belo
+```
+Compiled with problems:X
+
+ERROR in src/App.tsx:9:5
+
+TS2322: Type 'number' is not assignable to type 'string'.
+     7 |   const multiply = (firstNumber: number, secondNumber: number): string => {
+     8 |     const result = firstNumber * secondNumber;
+  >  9 |     return result
+       |     ^^^^^^^^^^^^^
+    10 |   }
+    11 |
+    12 |   console.log(multiply(10, 10));
+
+```
 
 # Getting Started with Create React App
 
