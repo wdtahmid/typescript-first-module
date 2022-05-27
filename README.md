@@ -1,5 +1,5 @@
-#Type Sript First Module
-##Install 
+# Type Sript First Module
+## Install 
 ```
 npx create-react-app folder/app-name template typescript
 ```
